@@ -6,14 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+      },
       colors: {
         primary: '#a21caf',
-        secondary: '#64748b',
+        secondary: '#6b7280',
         dark: '#0f172a',
       },
-      screens: {
-        '2xl': '1320px',
-      }
     },
   },
   plugins: [],

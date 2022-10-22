@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
+import Hero from '../components/Hero';
 
 function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Portfolio | Eko Rahayu Widodo</title>
         <meta
@@ -12,7 +13,10 @@ function Home() {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-    </div>
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
 

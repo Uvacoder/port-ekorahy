@@ -25,6 +25,7 @@ function MobileNav({open, setOpen}) {
             <div className="flex flex-col mx-4">
               <NavLinkMobile to="/" setOpen={setOpen}>Home</NavLinkMobile>
               <NavLinkMobile to="/" setOpen={setOpen}>About</NavLinkMobile>
+              <NavLinkMobile to="/" setOpen={setOpen}>Blog</NavLinkMobile>
               <NavLinkMobile to="/" setOpen={setOpen}>Portfolio</NavLinkMobile>
               <NavLinkMobile to="/" setOpen={setOpen}>Contact</NavLinkMobile>
             </div>  
@@ -36,7 +37,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header>
-    <nav className="flex filter drop-shadow-sm bg-white px-2 py-4 h-20 items-center md:px-16">
+    <nav className="flex filter drop-shadow-sm bg-white px-2 py-4 h-20 items-center md:container">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
                 <NavLink to="/" className="">
@@ -57,6 +58,7 @@ function Navbar() {
                 <div className="hidden md:flex md:space-x-6">
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/">About</NavLink>
+                    <NavLink to="/">Blog</NavLink>
                     <NavLink to="/">Portfolio</NavLink>
                     <NavLink to="/">Contact</NavLink>
                 </div>
