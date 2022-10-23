@@ -1,6 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
+import About from '../components/About';
+import Certificates from '../components/Certificates';
 import Hero from '../components/Hero';
+import Portfolio from '../components/Portfolio';
+import TechStack from '../components/TechStack';
 
 function Home() {
   return (
@@ -13,8 +17,12 @@ function Home() {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <main>
+      <main className=" md:container relative py-10">
         <Hero />
+        <About />
+        <TechStack />
+        <Portfolio />
+        <Certificates />
       </main>
     </>
   );

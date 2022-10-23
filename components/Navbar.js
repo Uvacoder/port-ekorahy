@@ -16,7 +16,7 @@ function NavLinkMobile({to, children, setOpen}) {
 
 function MobileNav({open, setOpen}) {
   return (
-    <div className={`absolute top-0 left-0 h-screen w-screen bg-white z-10 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-500 ease-in-out filter drop-shadow-sm `}>
+    <div className={`absolute top-0 left-0 h-screen w-screen bg-white z-100 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-500 ease-in-out filter drop-shadow-sm `}>
             <div className="flex items-center justify-start px-4 filter drop-shadow-sm bg-white h-20"> {/*logo container*/}
                 <NavLinkMobile to="/" setOpen={setOpen}>
                   <Image src={"/logo2.png"} width={40} height={40} alt="Logo Ekorahy" />
@@ -26,8 +26,8 @@ function MobileNav({open, setOpen}) {
               <NavLinkMobile to="/" setOpen={setOpen}>Home</NavLinkMobile>
               <NavLinkMobile to="/" setOpen={setOpen}>About</NavLinkMobile>
               <NavLinkMobile to="/" setOpen={setOpen}>Blog</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>Portfolio</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>Contact</NavLinkMobile>
+              <NavLinkMobile to="/" setOpen={setOpen}>Home</NavLinkMobile>
+              <NavLinkMobile to="/" setOpen={setOpen}>About</NavLinkMobile>
             </div>  
         </div>
   );
@@ -37,7 +37,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header>
-    <nav className="flex filter drop-shadow-sm bg-white px-2 py-4 h-20 items-center md:container">
+    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white px-2 py-4 h-20 md:container">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
                 <NavLink to="/" className="">
@@ -57,7 +57,7 @@ function Navbar() {
 
                 <div className="hidden md:flex md:space-x-6">
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/">About</NavLink>
+                    <NavLink to="#about">About</NavLink>
                     <NavLink to="/">Blog</NavLink>
                     <NavLink to="/">Portfolio</NavLink>
                     <NavLink to="/">Contact</NavLink>
