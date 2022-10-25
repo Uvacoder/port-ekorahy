@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import NavBottomMenu from './NavBottomMenu';
 import { AiFillHome, AiFillMessage } from "react-icons/ai";
+import { BiNetworkChart } from "react-icons/bi";
 import { IoMdContact } from "react-icons/io";
 import { BsStack } from "react-icons/bs";
 import { FaMegaport } from "react-icons/fa";
@@ -20,13 +21,13 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="sticky bottom-0">
+        <div className="fixed bottom-0">
         <nav className="bg-primary w-screen h-12 md:container">
             <div className="h-full flex justify-between gap-2 px-2 items-center">
               <div><NavBottomMenu to="#about" icon={<IoMdContact />} title="About" /></div>
-              <div><NavBottomMenu to="/" icon={<BsStack />} title="Tech Stack" /></div>
+              <div><NavBottomMenu to="#techStack" icon={<BsStack />} title="Tech Stack" /></div>
               <div className="border shadow-xl bg-white rounded-full relative bottom-4 p-2"><NavBottomMenu className="text-primary " to="/" icon={<AiFillHome />} title="Home" /></div>
-              <div><NavBottomMenu to="/" icon={<FaMegaport />} title="Portfolio" /></div>
+              <div><NavBottomMenu to="#portfolio" icon={<BiNetworkChart />} title="Portfolio" /></div>
               <div><NavBottomMenu to="/" icon={<AiFillMessage />} title="Contact" /></div>
             </div>
         </nav>

@@ -3,7 +3,7 @@ import ItemPortfolio from './ItemPortfolio';
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="bg-gray-100 py-4">
+    <section id="portfolio" className="bg-gray-100 pt-20">
       <div>
         <h1 className="text-center font-bold text-lg">Portfolio</h1>
         {/*

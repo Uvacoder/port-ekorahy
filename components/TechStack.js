@@ -4,7 +4,7 @@ import TitleStack from './TitleStack';
 
 function TechStack() {
   return (
-    <section id="techStack" className="my-2 mx-4">
+    <section id="techStack" className="pt-20 mx-4">
       <h1 className="font-bold text-lg">Tech Stack</h1>
       <div className="grid grid-cols-1 gap-4 mt-1 mb-8 md:px-32 md:grid-cols-4 ld:grid-cols-3">
         <div className="p-4 rounded-lg border">
