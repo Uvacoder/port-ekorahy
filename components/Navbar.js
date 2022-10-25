@@ -8,51 +8,43 @@ function NavLink({to, children}) {
     </Link>
 }
 
-function NavLinkMobile({to, children, setOpen}) {
+function NavLinkMobile({to, setOpen, children}) {
   return <Link href={to}>
-    <a className="px-2 py-2 my-2 font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>{children}</a>
+    <a className="p-2 text-center my-2 font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>{children}</a>
   </Link>
 }
 
 function MobileNav({open, setOpen}) {
   return (
-    <div className={`absolute top-0 left-0 h-screen w-screen bg-white z-100 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-500 ease-in-out filter drop-shadow-sm `}>
-            <div className="flex items-center justify-start px-4 filter drop-shadow-sm bg-white h-20"> {/*logo container*/}
-                <NavLinkMobile to="/" setOpen={setOpen}>
-                  <Image src={"/logo2.png"} width={40} height={40} alt="Logo Ekorahy" />
-                </NavLinkMobile>
-            </div>
-            <div className="flex flex-col mx-4">
-              <NavLinkMobile to="/" setOpen={setOpen}>Home</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>About</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>Blog</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>Home</NavLinkMobile>
-              <NavLinkMobile to="/" setOpen={setOpen}>About</NavLinkMobile>
-            </div>  
-        </div>
+    <div className={`absolute top-12 right-10 h-max w-max px-2 rounded-lg bg-white transform ${open ? "visible" : "hidden"} drop-shadow-xl`}>
+        <div className="flex flex-col mx-4">
+          <NavLinkMobile to="/" setOpen={setOpen}>Youtube</NavLinkMobile>
+          <NavLinkMobile to="/" setOpen={setOpen}>Blog</NavLinkMobile>
+          <NavLinkMobile to="/" setOpen={setOpen}>Tik Tok</NavLinkMobile>
+        </div>  
+    </div>
   );
 }
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <header>
-    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white px-2 py-4 h-20 md:container">
+    <header className="sticky top-0">
+    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white  py-4 h-14 md:container">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
                 <NavLink to="/" className="">
-                  <Image src={"/logo2.png"} width={40} height={40} alt="Logo Ekorahy" />
+                  <Image src={"/logo2.png"} width={30} height={30} alt="Logo Ekorahy" />
                 </NavLink>
             </div>
             <div className="w-9/12 flex justify-end items-center">
-
-                <div className="z-50 flex relative w-16 h-16 p-4 flex-col justify-between items-center md:hidden" onClick={() => {
+                <div className="flex relative w-14 h-14 p-4 flex-col justify-between items-center md:hidden" onClick={() => {
                     setOpen(!open)
                 }}>
                     {/* hamburger button */}
-                    <span className={`h-1 w-full bg-gray-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-3.5" : ""}`} />
+                    <span className={`h-1 w-full bg-gray-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "rotate-45 translate-y-2.5" : ""}`} />
                     <span className={`h-1 w-full bg-gray-500 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                    <span className={`h-1 w-full bg-gray-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-3.5" : ""}`} />
+                    <span className={`h-1 w-full bg-gray-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-2.5" : ""}`} />
                 </div>
 
                 <div className="hidden md:flex md:space-x-6">
