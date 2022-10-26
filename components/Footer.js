@@ -22,8 +22,8 @@ function Footer() {
           </div>
         </div>
         <div className="fixed bottom-0">
-        <nav className="bg-primary w-screen h-12 md:container">
-            <div className="h-full flex justify-between gap-2 px-2 items-center">
+        <nav className="bg-primary w-screen h-18 md:container">
+            <div className="h-full flex justify-between gap-2 px-4 items-center">
               <div><NavBottomMenu to="#about" icon={<IoMdContact />} title="About" /></div>
               <div><NavBottomMenu to="#techStack" icon={<BsStack />} title="Tech Stack" /></div>
               <div className="border shadow-xl bg-white rounded-full relative bottom-4 p-2"><NavBottomMenu className="text-primary " to="/" icon={<AiFillHome />} title="Home" /></div>

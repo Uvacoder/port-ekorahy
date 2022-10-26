@@ -30,11 +30,11 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0">
-    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white  py-4 h-14 md:container">
+    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white py-4 h-16 md:container">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
                 <NavLink to="/" className="">
-                  <Image src={"/logo2.png"} width={30} height={30} alt="Logo Ekorahy" />
+                  <Image src={"/logo2.png"} width={35} height={35} alt="Logo Ekorahy" />
                 </NavLink>
             </div>
             <div className="w-9/12 flex justify-end items-center">
