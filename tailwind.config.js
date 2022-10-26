@@ -13,8 +13,12 @@ module.exports = {
       colors: {
         primary: '#a21caf',
         secondary: '#6b7280',
-        dark: '#0f172a',
+        dark: '#334155',
       },
+      fontFamily: {
+        Quicksand: ['Quicksand', 'sans-serif'],
+        Kanit: ['Kanit', 'sans-serif'],
+      }
     },
   },
   plugins: [],

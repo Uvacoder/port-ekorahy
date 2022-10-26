@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function NavLink({to, children}) {
   return <Link href={to}>
@@ -28,9 +28,24 @@ function MobileNav({open, setOpen}) {
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [shadow, setShadow] = useState("drop-shadow-none");
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY > 72) {
+      return setShadow("drop-shadow-md");
+    } else {
+      return setShadow("drop-shadow-none");
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () => window.removeEventListener('scroll', listenScrollEvent);  
+  }, [])
+
   return (
-    <header className="sticky top-0">
-    <nav className="flex items-center w-screen filter drop-shadow-sm bg-white py-4 h-16 md:container">
+    <header className={`sticky top-0 z-10 ${shadow}`}>
+    <nav className="flex items-center w-screen filter bg-white py-4 h-16 md:container">
             <MobileNav open={open} setOpen={setOpen}/>
             <div className="w-3/12 flex items-center">
                 <NavLink to="/" className="">

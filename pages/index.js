@@ -17,7 +17,7 @@ function Home() {
         />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <main className="bg-white relative -z-10 md:py-10 md:container">
+      <main className="bg-white relative md:py-10 md:container">
         <Hero />
         <About />
         <TechStack />
