@@ -10,7 +10,7 @@ function SubAbout({title, subTitle, date, description, place}) {
       </div>
       <div className="flex flex-col md:flex-row">
         <div className="px-2">
-          <h1 className="font-bold font-Kanit w-max text-md">{title}</h1>
+          <h1 className="font-bold font-Kanit text-md">{title}</h1>
           <h2 className="font-bold font-Quicksand text-sm text-primary mt-0.5">{subTitle}<span className='text-black'> ({date})</span></h2>
           <p className="font-Quicksand  text-secondary text-sm leading-relaxed mt-1.5">{description}</p>
         </div>

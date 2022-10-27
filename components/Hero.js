@@ -15,8 +15,8 @@ function Hero() {
         </div>
         <div className="w-full self-center lg:w-1/2 mt-2">
           <h2 className="font-semibold text-dark text-lg font-Kanit">{`Hi, i'm Eko Rahayu Widodo`}</h2>
-          <h1 className="text-primary font-Kanit font-bold text-3xl mt-1">Front-End Web Developer & Designer</h1>
-          <p className="text-secondary font-Quicksand text-sm mt-2 leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum voluptatem ex earum explicabo minima labore aperiam praesentium eaque animi alias?.</p>
+          <h1 className="text-primary font-Kanit font-bold text-3xl mt-1">Front-End Web Developer</h1>
+          <p className="text-secondary font-Quicksand text-sm mt-2 leading-relaxed">Make the website more modern and minimalist.</p>
           <div className="flex items-center mt-4">
                 <a href="#" target="_blank" className='w-48 h-10 mr-3 px-3 rounded flex justify-center items-center font-Quicksand border bg-primary hover:bg-fuchsia-600 text-sm font-medium md:text-lg text-white'><SiGmail className="text-lg mr-1.5" />Email Me</a>
 
