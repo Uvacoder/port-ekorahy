@@ -10,17 +10,16 @@ function NavLink({to, children}) {
 
 function NavLinkMobile({to, setOpen, children}) {
   return <Link href={to}>
-    <a className="p-2 text-center my-2 font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>{children}</a>
+    <a className="px-4 text-center py-3 font-medium text-md border-b text-gray-500 hover:bg-gray-100 hover:text-gray-800" onClick={() => setTimeout(() => {setOpen(!open)}, 100)}>{children}</a>
   </Link>
 }
 
 function MobileNav({open, setOpen}) {
   return (
     <div className={`absolute top-12 right-10 h-max w-max px-2 rounded-lg bg-white transform ${open ? "visible" : "hidden"} drop-shadow-xl`}>
-        <div className="flex flex-col mx-4">
-          <NavLinkMobile to="/" setOpen={setOpen}>Youtube</NavLinkMobile>
-          <NavLinkMobile to="/" setOpen={setOpen}>Blog</NavLinkMobile>
-          <NavLinkMobile to="/" setOpen={setOpen}>Tik Tok</NavLinkMobile>
+        <div className="flex flex-col">
+          <NavLinkMobile to="/youtube" setOpen={setOpen}>Youtube</NavLinkMobile>
+          <NavLinkMobile to="/blog" setOpen={setOpen}>Blog</NavLinkMobile>
         </div>  
     </div>
   );
