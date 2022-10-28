@@ -5,7 +5,7 @@ import SubAbout from './SubAbout';
 function Experiences() {
   return (
     <section id="experiences">
-      <h1 className="text-lg font-Kanit font-bold">Work Experiences
+      <h1 className="text-lg font-Kanit font-bold lg:text-2xl">Work Experiences
       </h1>
       <div className="flex flex-col">
         <SubAbout title="Freelance" subTitle="Front-End Web Developer" date="Oct 2022 - Now" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusantium adipisci labore libero facere illo atque soluta pariatur ratione quia!" place="Jakarta, Indonesia" />

@@ -8,9 +8,9 @@ import Certificate from './Certificate';
 function Certificates() {
   return (
     <section id="certificates" className="py-20 mx-4">
-      <h1 className="font-bold font-Kanit text-center text-lg">Badges/Certificates</h1>
-      <h2 className="text-lg font-semibold font-Kanit text-primary mt-2">Certificates</h2>
-      <div className="grid grid-cols-1 gap-4 md:px-32 md:grid-cols-2 ld:grid-cols-3">
+      <h1 className="font-bold font-Kanit text-center text-lg lg:text-2xl">Badges/Certificates</h1>
+      <h2 className="text-lg font-semibold font-Kanit text-primary mt-2 lg:text-xl">Certificates</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 ld:grid-cols-3">
         <div className="mt-1">
           <TitleCertificate>Front-End Web Development</TitleCertificate>
           <Certificate src="/logo-dicoding.png" to="https://www.dicoding.com/certificates/1RXYY95J9XVM" title="Belajar Dasar Pemrograman Web" expDate="Issued Feb 2022 · Expires Feb 2025" />
@@ -54,7 +54,7 @@ function Certificates() {
       </div>
       <div>
       <h2 className="text-lg font-Kanit font-semibold text-primary mt-2">Badges</h2>
-        <div>
+        <div className="md:w-3/4">
           <Certificate src="/logo-dicoding.png" to="https://drive.google.com/file/d/166SGDF_8kCrgw6-pxA6bka-5bQ2IFS7L/view?usp=sharing" title="Certificate of Appreciation for Studi Independen Kampus Merdeka Batch 2 Program (Learning Path - Front-End Web and Back-End Developer)" expDate="Issued Jul 2022" />
         </div>
       </div>

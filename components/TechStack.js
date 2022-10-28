@@ -5,8 +5,8 @@ import TitleStack from './TitleStack';
 function TechStack() {
   return (
     <section id="techStack" className="pt-20 mx-4">
-      <h1 className="font-bold font-Kanit text-lg">Tech Stack</h1>
-      <div className="grid grid-cols-1 gap-4 mt-3 md:px-32 md:grid-cols-4 ld:grid-cols-3">
+      <h1 className="font-bold font-Kanit text-lg md:text-center lg:text-2xl">Tech Stack</h1>
+      <div className="grid grid-cols-1 gap-4 mt-3 md:grid-cols-3 ld:grid-cols-3">
         <div className="p-4 rounded-lg border">
           <TitleStack>Language</TitleStack>
           <div>
