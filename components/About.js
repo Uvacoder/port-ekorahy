@@ -21,7 +21,7 @@ function About() {
         <div className="w-full mt-2 lg:w-1/2">
           <Education />
         </div>
-        <div className="w-full mt-2 lg:w-1/2">
+        <div className="w-full mt-4 lg:w-1/2">
           <Experiences />
         </div>
       </div>
