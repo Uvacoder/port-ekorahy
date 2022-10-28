@@ -10,8 +10,8 @@ import { TbCertificate } from "react-icons/tb";
 function Footer() {
   return (
     <>
-      <footer className="sticky bottom-0 lg:static">
-        <div className="hidden h-20 w-full sticky bottom-0 bg-gray-100 container lg:visible">
+      <footer>
+        <div className="h-20 w-full bg-gray-100 container lg:visible">
           <div className="h-full flex items-center justify-between">
             <div className="flex items-center">
             <Image src="/logo2.png" height={50} width={50} alt="Profile Image" />
@@ -21,14 +21,14 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0">
-        <nav className="bg-primary w-screen h-12 md:container">
-            <div className="h-full flex justify-between gap-2 px-4 items-center">
-              <div><NavBottomMenu to="#about" icon={<IoMdContact />} title="About" /></div>
-              <div><NavBottomMenu to="#techStack" icon={<BsStack />} title="Stack" /></div>
-              <div className="border shadow-xl bg-white rounded-full relative bottom-4 p-2"><NavBottomMenu className="text-primary " to="/" icon={<AiFillHome />} title="Home" /></div>
-              <div><NavBottomMenu to="#portfolio" icon={<BiNetworkChart />} title="Portfolio" /></div>
-              <div><NavBottomMenu to="#certificates" icon={<TbCertificate />} title="Certificates" /></div>
+        <div className="fixed bottom-0 lg:hidden">
+        <nav className="bg-primary w-screen h-12 md:h-16">
+            <div className="h-full flex justify-between gap-2 px-4 items-center md:container">
+              <div><NavBottomMenu to="/#about" icon={<IoMdContact />} title="About" /></div>
+              <div><NavBottomMenu to="/#techStack" icon={<BsStack />} title="Tech Stack" /></div>
+              <div className="border shadow-xl bg-white rounded-full relative bottom-4 p-2"><NavBottomMenu className="text-primary " to="/" icon={<AiFillHome />} /></div>
+              <div><NavBottomMenu to="/#portfolio" icon={<BiNetworkChart />} title="Portfolio" /></div>
+              <div><NavBottomMenu to="/#certificates" icon={<TbCertificate />} title="Certificates" /></div>
             </div>
         </nav>
         </div>

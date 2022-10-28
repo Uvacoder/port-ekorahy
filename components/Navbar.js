@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 function NavLink({to, children}) {
   return <Link href={to}>
-        <a className="flex items-center font-medium p-4 text-gray-500 hover:bg-gray-100 hover:rounded-xl hover:text-gray-800">{children}</a>
+        <a className="flex items-center font-medium font-Kanit p-4 text-gray-500 hover:bg-gray-100 hover:rounded-xl hover:text-gray-800">{children}</a>
     </Link>
 }
 
@@ -51,7 +51,7 @@ function Navbar() {
                   <Image src={"/logo2.png"} width={35} height={35} alt="Logo Ekorahy" />
                 </NavLink>
             </div>
-            <div className="w-9/12 flex justify-end items-center">
+            <div className="w-9/12 flex justify-end items-center lg:justify-between">
                 <div className="flex relative w-14 h-14 p-4 flex-col justify-between items-center md:hidden" onClick={() => {
                     setOpen(!open)
                 }}>
@@ -60,13 +60,16 @@ function Navbar() {
                     <span className={`h-1 w-full bg-gray-500 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
                     <span className={`h-1 w-full bg-gray-500 rounded-lg transform transition duration-300 ease-in-out ${open ? "-rotate-45 -translate-y-2.5" : ""}`} />
                 </div>
-
-                <div className="hidden md:flex md:space-x-6">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="#about">About</NavLink>
-                    <NavLink to="/">Blog</NavLink>
-                    <NavLink to="/">Portfolio</NavLink>
-                    <NavLink to="/">Contact</NavLink>
+                <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-2 xl:ml-12">
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/#about">About</NavLink>
+                  <NavLink to="/#techStack">Tech Stack</NavLink>
+                  <NavLink to="/#portfolio">Portfolio</NavLink>
+                  <NavLink to="/#certificates">Certificates</NavLink>
+                </div>
+                <div className="hidden md:flex md:space-x-4 lg:space-x-2">
+                    <NavLink to="/youtube">Youtube</NavLink>
+                    <NavLink to="/blog">Blog</NavLink>
                 </div>
             </div>
         </nav>
